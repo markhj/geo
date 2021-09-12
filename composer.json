@@ -20,7 +20,8 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {
-        "phpunit/phpunit": "9.5.x-dev"
-    }
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "9.5"
+    },
 }
