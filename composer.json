@@ -1,0 +1,26 @@
+{
+    "name": "markhj/geo",
+    "description": "Various geographical tools",
+    "type": "library",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "Markhj\\Geo\\": "src/Geo"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Markhj\\Geo\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mhj",
+            "email": "5261387+markhj@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "phpunit/phpunit": "9.5.x-dev"
+    }
+}
