@@ -7,16 +7,23 @@ class Coordinate
 	/**
 	 * Latitude
 	 * 
-	 * @var float
+	 * @var null|float
 	 */
 	protected $lat;
 
 	/**
 	 * Longitude
 	 * 
-	 * @var float
+	 * @var null|float
 	 */
 	protected $lng;
+
+	/**
+	 * Elevation
+	 * 
+	 * @var null|float
+	 */
+	protected $elevation;
 
 	/**
 	 * Constructor
@@ -26,11 +33,12 @@ class Coordinate
 	 */
 	public function __construct(
 		?float $lat = null,
-		?float $lng = null
+		?float $lng = null,
+		?float $elevation = null
 	)
 	{
 		if (!is_null($lat) && !is_null($lng)) {
-			$this->set($lat, $lng);
+			$this->set($lat, $lng, $elevation);
 		}
 	}
 
@@ -39,15 +47,18 @@ class Coordinate
 	 * 
 	 * @param float $lat
 	 * @param float $lng
+	 * @param null|float $elevation
 	 * @return Coordinate
 	 */
 	public function set(
 		float $lat,
-		float $lng
+		float $lng,
+		?float $elevation = null
 	): Coordinate
 	{
 		$this->lat = $lat;
 		$this->lng = $lng;
+		$this->elevation = $elevation;
 
 		return $this;
 	}
@@ -70,5 +81,15 @@ class Coordinate
 	public function lng(): float
 	{
 		return $this->lng;
+	}
+
+	/**
+	 * Get elevation
+	 * 
+	 * @return null|float
+	 */
+	public function elevation(): ?float
+	{
+		return $this->elevation;
 	}
 }
