@@ -42,6 +42,14 @@ class Coordinate
 		}
 	}
 
+	public function toArray(): array
+	{
+		return [
+			$this->lat(),
+			$this->lng(),
+		];
+	}
+
 	/**
 	 * Set lat/lng coordinate
 	 * 
